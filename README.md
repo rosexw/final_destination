@@ -38,3 +38,6 @@ My additional features:
 
 ## Deployed!
 Check it out here: https://rosexw.github.io/final_destination/
+
+## Screenshot of app
+![Screenshot of Final Destination](https://github.com/rosexw/final_destination/blob/master/finaldestination.png){ width="200" style="display: block; margin: 0 auto" }
