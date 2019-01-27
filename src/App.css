@@ -4,7 +4,8 @@
 
 
 header {
-  padding: 20px;
+  font-size: 30px;
+  color: #3CBC8D;
 }
 
 input[type="number"] {
@@ -18,7 +19,7 @@ input[type="number"] {
 input[type="submit"] {
   padding: 10px;
   margin: 10px;
-  font-size: 40px;
+  font-size: 30px;
   border: none;
   background-color: #3CBC8D;
   color: white;

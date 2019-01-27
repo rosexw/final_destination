@@ -8,28 +8,30 @@ The 3rd parameter is the first number of the array, 4th is the last.
 If end / start of array is reached, loop from the other end again.
  
 ## Method Interface:
+```
 public int cycle( int current , int imove , int start , int end ) {
- 
- 
+ // function details 
 }
- 
+```
+
 ## Examples to test code with:
+```
 console.log(cycle(3,1,3,7)); //[3,4,5,6,7] result is 4
-console.log(cycle(3,1,1,5)); // [1,2,3,4,5] , result is 4
-console.log(cycle(7,-2,3,7)); // [3,4,5,6,7] , result is 5
-console.log(cycle(3,-3,1,5)); // [1,2,3,4,5] , result is 5
-console.log(cycle(3,3,1,5)); // [1,2,3,4,5] , result is 1
-console.log(cycle(3,10,1,6)); // [1,2,3,4,5,6] , result is 1
-console.log(cycle(3,-10,1,6)); // [1,2,3,4,5,6] , result is 5
-console.log(cycle(8,-10,1,3)); // [1,2,3] , result is ERROR, number out of range
+console.log(cycle(3,1,1,5)); // [1,2,3,4,5] result is 4
+console.log(cycle(7,-2,3,7)); // [3,4,5,6,7] result is 5
+console.log(cycle(3,-3,1,5)); // [1,2,3,4,5] result is 5
+console.log(cycle(3,3,1,5)); // [1,2,3,4,5] result is 1
+console.log(cycle(3,10,1,6)); // [1,2,3,4,5,6] result is 1
+console.log(cycle(3,-10,1,6)); // [1,2,3,4,5,6] result is 5
+console.log(cycle(8,-10,1,3)); // [1,2,3] result is ERROR, number out of range
+```
 
 ## My plan:
 MVP: Write this function in any language, but preferably JavaScript or any JavaScript framework
-(The MVP is found in cycle.js file that can be run as `node cycle.js`. It does not take user input but only logs the examples in the file.)
+
 Bonus: Complete this with UI/UX using HTML5 & CSS.
 
-My way of adding to this:
+My additional features:
 - Use React framework to display UI/UX on screen and to make it interactive on a webpage
-- First try displaying it as a form that takes user input and displays the final number
+- Display it as a form that takes user input and displays the final number
 - Deploy to a GitHub page
-- Then, if time, make it an interactive slider.
