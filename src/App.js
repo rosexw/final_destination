@@ -11,6 +11,7 @@ class App extends Component {
       current: '',
       moves: '',
       result: null,
+      error: null,
     };
 
     this.handleMinChange = this.handleMinChange.bind(this);
@@ -25,16 +26,19 @@ class App extends Component {
       min: event.target.value,
     });
   }
+
   handleMaxChange(event) {
     this.setState({
       max: event.target.value,
     });
   }
+
   handleCurrentChange(event) {
     this.setState({
       current: event.target.value,
     });
   }
+
   handleMovesChange(event) {
     this.setState({
       moves: event.target.value,
@@ -45,10 +49,21 @@ class App extends Component {
     event.preventDefault();
     // alert('The min number : ' + this.state.min + '\n The max number is: ' + this.state.max + '\n The current number is: ' + this.state.current +'\n The number of moves we should make is: ' + this.state.moves);
     const {current, moves, min, max} = this.state;
-    const result = cycle(parseInt(current, 10), parseInt(moves, 10), parseInt(min, 10), parseInt(max, 10));
-    this.setState({
-      result,
-    })
+
+    try {
+      const result = cycle(parseInt(current, 10), parseInt(moves, 10), parseInt(min, 10), parseInt(max, 10));
+      this.setState({
+        result,
+        error: null,
+      })
+    }
+    catch(error) {
+      this.setState({
+        result: null,
+        error: error.message,
+      })
+    }
+
   }
 
   render() {
@@ -83,14 +98,24 @@ class App extends Component {
             </label>
           </p>
           <input type="submit" value="Submit" />
-        </form> 
-      
-        {
-          this.state.result !== null &&
-            <h2>
-              Your final position is {this.state.result}.
-            </h2>
-        }
+        </form>
+
+        <div className="error">
+          {
+            this.state.error && 
+              <h2>
+                {this.state.error}
+              </h2>
+          }
+        </div>
+        <div className="result">
+          {
+            this.state.result !== null &&
+              <h2>
+                Your final position is {this.state.result}.
+              </h2>
+          }
+        </div>
 
       </div>
     );

@@ -5,7 +5,7 @@
 
 header {
   font-size: 30px;
-  color: #3CBC8D;
+  color: #6BA2A2;
 }
 
 input[type="number"] {
@@ -21,7 +21,15 @@ input[type="submit"] {
   margin: 10px;
   font-size: 30px;
   border: none;
-  background-color: #3CBC8D;
+  background-color: #6BA2A2;
   color: white;
   border-radius: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.result {
+  color: #3CBC8D
 }
