@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+
+header {
+  padding: 20px;
+}
+
+input[type="number"] {
+  text-align: center;
+  width: 50px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  margin: 10px;
+  font-size: 40px;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+  border-radius: 10px;
+}
