@@ -2,7 +2,7 @@
   "name": "final-destination",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rosexw.github.io/finalDestination",
+  "homepage": "https://rosexw.github.io/final_destination",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
